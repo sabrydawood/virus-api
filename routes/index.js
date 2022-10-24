@@ -1,32 +1,35 @@
 
+module.exports.launch = async (client) => {
+
+
+	
 
 const express = require('express');
 const app = express();
+	
 const cookieParser = require("cookie-parser");
 const helmet = require("helmet");
  const oneDay = 1000 * 60 * 60 * 24;
-var customSession = require('express-session');;
-module.exports.launch = async (client) => {
+var session = require('express-session');
 const jsonRoutes = require("./json")
-const discordVirus24Routes = require("./packages/diacordVirus24"),
-	authRoutes = require("./auth"),
+const discordVirus24Routes = require("./packages/diacordVirus24")
+	const authRoutes = require("./auth")
 
 
-app
-    .use(express.json()) // For post methods
-    .use(express.urlencoded({ extended: true }))
-    .use(cookieParser())
- .disable('x-powered-by')
- .use(helmet({
+app.use(express.json()) // For post methods
+    app.use(express.urlencoded({ extended: true }))
+    app.use(cookieParser())
+ app.disable('x-powered-by')
+ app.use(helmet({
     contentSecurityPolicy: false,
   }))
-    .engine("html", require("ejs").renderFile) // Set the engine to html (for ejs template)
- .set("view engine", "ejs")
-     .use(express.static( "@root/public")) // Set the css and js folder to ./public
-    .set("views", "@root/views") // Set the ejs templates to ./views
+    app.engine("html", require("ejs").renderFile) // Set the engine to html (for ejs template)
+ app.set("view engine", "ejs")
+     app.use(express.static( "@root/public")) // Set the css and js folder to ./public
+    app.set("views", "@root/views") // Set the ejs templates to ./views
 
 //session middleware
-.use(session({
+app.use(session({
   secret: process.env.SESSION_PASSWORD,
     saveUninitialized:true,
     cookie: { maxAge: oneDay },
@@ -37,8 +40,8 @@ app
 //add routes to express app
 //--------------++++++------------\\
 app.use("/json", jsonRoutes)
-.use("/virus", discordVirus24Routes)
-.use("/auth", authRoutes)
+app.use("/canvas", discordVirus24Routes)
+app.use("/auth", authRoutes)
 
 //--------------++++++------------\\
 

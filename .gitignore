@@ -1,0 +1,9 @@
+run.sh
+node_modules
+.replit
+replit.nix
+.env
+package-lock.json
+.config
+.upm
+logs

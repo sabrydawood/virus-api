@@ -7,6 +7,7 @@
       "@root/*": ["./*"],
       "@images/*": ["./images/*"],
       "@helpers/*": ["./helpers/*"],
+      "@assets/*": ["./assets/*"],
       "@schemas/*": ["./database/schemas/*"]
     }
   },

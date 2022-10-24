@@ -5,7 +5,7 @@ const { initializeMongoose } = require("@root/database/mongoose");
 const { launch } = require("@root/routes")
 const logger = require("@helpers/logger")
 // make an variable to add something to it with name client 
-let client; 
+let client = {};
 client.logger = logger;
 client.config = config;
 (async () => {
