@@ -2,11 +2,14 @@ const express = require("express");
 const router = express.Router();
 const { Utils } = require("@helpers/utils")
 
-router.get("/login", (req, res) => {  
-res.send(200); 
+router.get("/docs", (req, res) => {  
+
+	res.render("docs")
+}); 
+router.get("/docs/discordvirus24", (req, res) => {  
+
+	res.render("pages/discordvirus")
 }); 
 
-router.get("/logout", (req, res) => {  
-res.send(200); 
-}); 
+
 module.exports= router;

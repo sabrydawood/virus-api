@@ -1,0 +1,76 @@
+
+	<%- include('partails/head'); %>
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+ 	<%- include('partails/header'); %>
+    <!-- end header section -->
+  </div>
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding mt-5">
+    <div class="container contact_heading">
+      <h2>
+        Contact Us
+      </h2>
+      <p>
+        psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      </p>
+    </div>
+    <div class="container">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputName4">Name</label>
+            <input type="text" class="form-control" id="inputName4"/>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4"/>
+          </div>
+
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputNumber4">Phone number</label>
+            <input type="tel" class="form-control" id="inputNumber4"/>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputState">Select Service</label>
+            <select id="inputState" class="form-control">
+              <option selected=""></option>
+              <option>...</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="form-group">
+          <label for="inputMessage">Message</label>
+          <input type="text" class="form-control" id="inputMessage" placeholder=""/>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="">Send</button>
+    </div>
+    </form>
+    
+  </section>
+
+
+  <!-- end contact section -->
+  <div class="footer_bg">
+    <!-- info section -->
+  
+	<%- include('partails/info'); %>
+
+    <!-- end info_section -->
+
+    <!-- footer section -->
+
+	<%- include('partails/footer'); %>
+    <!-- footer section -->
+		
+  </div>
+		
+	<%- include('partails/foot'); %>

@@ -12,7 +12,7 @@ const Schema = new mongoose.Schema(
     logged: Boolean,
     avatar :{
 			type: String,
-			default: "@assets/required/avatar.jpg"
+			default: "@root/public/imgs/required/avatar.jpg"
 		}
   },
   {
